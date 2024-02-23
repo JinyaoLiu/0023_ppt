@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Sea and Land Surface Temperature Radiometer</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="JInyao Liu" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Sea and Land Surface Temperature Radiometer
+]
+.subtitle[
+## (SLSTR)
+]
+.author[
+### JInyao Liu
+]
+.institute[
+### UCL Bartlett Centre for Advanced Spatial Analysis
+]
+
+---
+
+class: inverse, center, middle
+
+
+# Brief introduction to the SLSTR sensor
+&lt;div style="text-align:center"&gt;
+    &lt;img src="fig1.png" alt="Your Image" width="300" height="200"&gt;
+    &lt;p style="font-style:italic; color:gray;"&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;a name=cite-slstr-sensor&gt;&lt;/a&gt;[Company (2024a)](#bib-slstr-sensor)
+
+
+
+---
+
+# Introduction
+
+Sea and Land Surface Temperature Radiometer (SLSTR) installed on the two Sentinel-3 series satellites (3A and 3B) – part of the European Union’s (EU) Copernicus Earth observation programme, aims to provide a reference Land Surface Temperature and Sea Surface Temperature dataset for climate data records.
+
+| Sensor Type | Sensor Subtype | Altitude | Inclination |
+|----------|----------|----------|----------|
+| Spectrometers/Radiometers  | Radiometer   | 814.5km  | 98.65°  |
+
+
+
+&lt;div style="text-align:center"&gt;
+    &lt;img src="fig2.png" alt="Your Image" width="300" height="200"&gt;
+    &lt;p style="font-style:italic; color:gray;"&gt; picture from SLSTR &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;a name=cite-slstr-sensor-2&gt;&lt;/a&gt;[Company (2024b)](#bib-slstr-sensor-2)
+
+---
+
+# Relative Datellites: Sentinel-3 
+
+Main mission: ocean and land observation. 
+
+(SLSTR is used for Multi-purpose VIS/IR imagery, with emphasis on very accurate surface temperature for climate)
+
+Sentinel-3A and Sentinel-3B are operational, Sentinel-3C and Sentinel-3D are in planning. 
+
+&lt;div style="text-align:center"&gt;
+    &lt;img src="fig3.png" alt="Your Image" width="300" height="200"&gt;
+    &lt;p style="font-style:italic; color:gray;"&gt; Sentinel-3 Satellite and Payloads &lt;/p&gt;
+&lt;/div&gt;
+
+&lt;a name=cite-sentinel-3-mission&gt;&lt;/a&gt;[ (2021)](#bib-sentinel-3-mission)
+
+---
+# Products and Algorithms
+
+Since the metadata obtained by SLSTR is very basic, additional algorithms are required to obtain the required products for study.
+
+Processing of SLSTR products: 
+
+
+|   | Level 0 | Level 1 | Level 2 |
+|---|-------|-------|-------|
+| Processing Overview | generates time sorted and annotated Level-0 data products from Instrument Source Packets (ISP) | derive a data product, in particular quality and classification flags as well as useful meteorological parameters | three core processors: WST/WCT and LST IPF, the FRP IPF, the AOD IPF. |
+| Products Description | not available to users and is considered only as input to SLSTR Level-1 processing | provide products that have been calibrated and observed | five different product packages: results from the SST, the L2P, the LST, FRP and AOD processing |
+
+&lt;a name=cite-sentinel3-slstr&gt;&lt;/a&gt;[EuropeanSpaceAgency (2024)](#bib-sentinel3-slstr)
+
+---
+
+# Applications: Climate and weather monitoring
+
+
+&lt;div style="text-align:center"&gt;
+    &lt;img src="fig4.png" alt="Your Image" width="300" height="200"&gt;
+&lt;/div&gt;
+
+SLSTR support data to undertake independent research projects on cirrus clouds and the retrieval of sea surface temperatures. 
+
+There are two SLSTR instruments in orbit currently, and together they are able to cover almost all the globe in a day. 
+
+SLSTR makes measurements of both visible light and infrared (heat).  The infrared is used to derive surface temperatures, and the visible is used to help detect the clouds that obscure the surface and to retrieve aerosol and cloud properties. &lt;a name=cite-sentinel3-climate-weather&gt;&lt;/a&gt;[RAL (2024)](#bib-sentinel3-climate-weather)
+
+
+---
+
+# Applications: Fire detection
+
+&lt;div style="text-align:center"&gt;
+    &lt;img src="fig5.png" alt="Your Image" width="300" height="200"&gt;
+&lt;/div&gt;
+
+The flame radiation temperature is detected through SLSTR thermal channels by detecting the spectral radiation brightness in the special mid-infrared wavelength range emitted by open vegetation fires. 
+
+The data is then processed using the SLSTR Active Fire algorithm, which uses a series of spatially varying thresholds to identify fire pixels.&lt;a name=cite-WOOSTER2012236&gt;&lt;/a&gt;[Wooster, Xu, and Nightingale (2012)](#bib-WOOSTER2012236)
+
+
+---
+
+#Reflection
+
+In recent years, with the gradual increase of extreme weather, some secondary disasters have followed, such as various forest fires and changes in ocean currents, and one of the obvious characteristics of these changes is the change in temperature. So I think this kind of timely, wide-reach temperature detection, while seemingly basic, may play an unexpectedly important role in disaster detection.
+
+In addition, there are two satellites equipped with SLSTR that have not been launched in the entire plan, and I hope the sensor equipped with these two satellites can give us more surprises.
+
+---
+
+# References
+
+&lt;a name=bib-sentinel-3-mission&gt;&lt;/a&gt;[Sentinel-3
+Overview](#cite-sentinel-3-mission) (2021). _Sentinel-3 Overview_.
+Accessed: 2024-01-29. European Space Agency.
+
+&lt;a name=bib-slstr-sensor&gt;&lt;/a&gt;[Company, L.](#cite-slstr-sensor) (2024a).
+_The SLSTR Sensor on the Sentinel-3 Satellite_. Accessed: 2024-01-29.
+
+&lt;a name=bib-slstr-sensor-2&gt;&lt;/a&gt;[Company, L.](#cite-slstr-sensor-2)
+(2024b). _The SLSTR Sensor on the Sentinel-3 Satellite_. Accessed:
+2024-01-29.
+
+&lt;a
+name=bib-sentinel3-slstr&gt;&lt;/a&gt;[EuropeanSpaceAgency](#cite-sentinel3-slstr)
+(2024). _Sentinel-3 SLSTR - Technical Guides_. Accessed: 2024-01-29.
+European Space Agency.
+
+&lt;a
+name=bib-sentinel3-climate-weather&gt;&lt;/a&gt;[RAL](#cite-sentinel3-climate-weather)
+(2024). _Looking after Sentinel-3 for climate and weather monitoring_.
+Accessed: 2024-01-29. STFC RAL Space.
+
+&lt;a name=bib-WOOSTER2012236&gt;&lt;/a&gt;[Wooster, M., W. Xu, and T.
+Nightingale](#cite-WOOSTER2012236) (2012). "Sentinel-3 SLSTR active
+fire detection and FRP product: Pre-launch algorithm development and
+performance evaluation using MODIS and ASTER datasets". In: _Remote
+Sensing of Environment_ 120. The Sentinel Missions - New Opportunities
+for Science, pp. 236-254.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
